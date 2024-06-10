@@ -1,4 +1,5 @@
 // import important parts of sequelize library
+const { dasherize } = require('inflection');
 const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection.js');
@@ -11,7 +12,7 @@ class Product extends Model { }
 Product.init(
   {
     id: {
-      types: DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true

@@ -1,5 +1,5 @@
-const router = require('express').Router();
-const { truncate } = require('lodash');
+const router = require('express').Router();//import router from express
+const { truncate } = require('lodash');//import the trucate from lodash
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
@@ -91,7 +91,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
   Category.destroy({
-    truncate: true, cascade: false,
+    // truncate: true, cascade: false,
     where: {
       id: req.params.id
     }

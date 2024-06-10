@@ -1,8 +1,9 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection.js');
+const { Model, DataTypes } = require('sequelize');//Import Sequelize's Model and DataTypes
+const sequelize = require('../config/connection.js');//Import the Sequelize instance configured with database connection
 
-class Category extends Model { }
+class Category extends Model { }//// Define a new class 'Category' that extends Sequelize's Model class
 
+// Initialize the 'Category' model with schema definition and configuration
 Category.init(
   {
     id: {

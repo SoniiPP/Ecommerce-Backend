@@ -140,7 +140,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
   Product.destroy({
-    truncate: true, cascade: false,
+    // truncate: true, cascade: false,
     where: {
       id: req.params.id
     }
